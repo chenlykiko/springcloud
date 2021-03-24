@@ -1,0 +1,15 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: cloud-payment-service
+  cloud:
+    consul:
+      host: 192.169.1.52
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        service-name: ${spring.application.name}
+        healthCheckInterval: 15s
+        health-check-url: http://192.169.1.165:8006/actuator/health

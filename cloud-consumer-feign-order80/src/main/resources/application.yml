@@ -20,3 +20,7 @@ ribbon:
 #指
   ReadTimeout: 5000
   ConnectTimeout: 5000
+
+logging:
+  level:
+      com.chenly.springcloud.service.PaymentFeignService: debug

@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class MyLB implements LoadBalancer {
 
 
-    private AtomicInteger atomicInteger =new AtomicInteger(0);
+    private final AtomicInteger atomicInteger =new AtomicInteger(0);
 
     public final int getAndIncrement()
     {

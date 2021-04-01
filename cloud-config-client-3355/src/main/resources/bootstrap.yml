@@ -1,0 +1,39 @@
+server:
+  port: 3355
+
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      #需要从github上读取的资源名称，注意没有yml后缀名
+      name: config
+      #读取后缀名称
+      profile: dev
+      #分支名称
+      label: main
+      #
+      #本微服务启动后先去找3344号服务，通过SpringCloudConfig获取GitHub的服务地址
+      uri: http://192.169.1.165:3344
+
+  rabbitmq:
+    host: 192.169.1.52
+    port: 5672
+    username: admin
+    password: 123456
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+

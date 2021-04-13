@@ -91,4 +91,12 @@ public class PaymentController {
     }
 
 
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin()
+    {
+        return "zipkin链路监控测试";
+    }
+
+
+
 }

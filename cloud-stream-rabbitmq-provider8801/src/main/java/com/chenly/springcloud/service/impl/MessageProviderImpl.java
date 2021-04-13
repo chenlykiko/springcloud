@@ -8,7 +8,8 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.MessageBuilder;
 
 import javax.annotation.Resource;
-import java.util.UUID;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -30,10 +31,10 @@ public class MessageProviderImpl implements IMessageProvider {
     @Override
     public String send(){
 
-        String serial = UUID.randomUUID().toString();
+        String serial = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
         output.send(MessageBuilder.withPayload(serial).build());
-        log.info("*********serial"+serial);
+        log.info("*********serial:"+serial);
         return null;
     }
 

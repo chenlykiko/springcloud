@@ -12,6 +12,8 @@
     <artifactId>cloud-consumerzk-order80</artifactId>
 
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>

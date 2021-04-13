@@ -3,7 +3,14 @@ server:
 
 spring:
   application:
-    name: cloud-order-service
+    name: cloud-order-service-chenly
+  zipkin:
+    base-url: http://192.169.1.52:9411
+    sleuth:
+      sampler:
+        probability: 1
+
+
 
 eureka:
   client:
